@@ -1,4 +1,4 @@
-# Basket - Modern E-Commerce Web App
+<!-- # Basket - Modern E-Commerce Web App
 
 [Live Demo](https://basket-ecommerce.netlify.app/)  
 
@@ -50,4 +50,4 @@ Basket is a modern, responsive e-commerce web application built using React, Red
 - a pop up for product details
 - login\ Register
 - search results 
-
+ -->
