@@ -1,28 +1,44 @@
-import React from 'react';
-import img1 from '@assets/images/img1.png';
-import img2 from '@assets/images/img2.png';
-import img3 from '@assets/images/img3.png';
-import img4 from '@assets/images/img4.png';
-import img5 from '@assets/images/img5.png';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+import { Link } from 'react-router-dom';
 
-const images = [img1, img2, img3, img4, img5];
 export default function BestSeller() {
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    axios.get('http://localhost:5000/api/products')
+      .then((res) => {
+        setProducts(res.data);
+      })
+      .catch((err) => {
+        console.error('Error fetching products:', err);
+      });
+  }, []);
+
   return (
-    <div className="flex w-full h-full bg-gray-100 gap-4 p-4">
-      {images.map((img, i) => (
+  <div className="bg-black">
+    <div className="flex w-full p-7 justify-between items-center">
+      <h1 className="text-xl font-bold text-white">Best Seller</h1>
+      <p className="text-yellow-500 cursor-pointer">View more</p>
+    </div>
+
+    <div className="grid grid-cols-2 items-center sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 p-4">
+      {products.map((product) => (
         <div
-          key={i}
-          className="w-1/4 h-full bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 flex flex-col items-center"
+          key={product.id}
+          className="w-full h-full rounded-lg shadow-sm flex flex-col items-center"
         >
-          <a href="/Home" className="w-full h-full">
+          <Link href="/home" className="w-full h-full">
             <img
-              src={img}
-              alt={`Best Seller ${i + 1}`}
+              src={product.image}
+              alt={product.name}
               className="rounded-t-lg w-full h-full object-contain"
             />
-          </a>
+          </Link>
         </div>
       ))}
     </div>
-  );
+  </div>
+);
+
 }

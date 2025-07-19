@@ -32,7 +32,7 @@ export default function Screen() {
   },);
 
   return (
-    <div className="relative w-full overflow-hidden h-96">
+    <div className="relative w-full overflow-hidden h-96 bg-black">
       <img
         src={images[current]}
         alt="Slide"

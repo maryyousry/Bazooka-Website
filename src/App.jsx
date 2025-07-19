@@ -1,14 +1,15 @@
-import React from 'react'
-import NavBar from './Components/NavBar'
-import Screen from './Components/Screen'
-import BestSellers from './Components/BestSeller'
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import BestSeller from "./components/BestSeller"; // ✅ make sure this path is correct
+// import ProductDetails from "./components/ProductDetails"; // ✅ make sure this path is correct
 
-export default function app() {
+function App() {
   return (
-    <div className=''>
-        <NavBar/>
-        <Screen/>
-        <BestSellers />
-    </div>
-  )
+    <Routes>
+      <Route path="/" element={<BestSeller />} />
+      {/* <Route path="/product/:id" element={<ProductDetails />} /> */}
+    </Routes>
+  );
 }
+
+export default App;
