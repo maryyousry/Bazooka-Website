@@ -24,7 +24,7 @@ export default function NavBar() {
 
   const NavLinks = () => (
     <ul className="flex flex-col lg:flex-row gap-4 lg:gap-8 text-[18px]">
-      {['Home', 'Menu', 'Contact'].map((name) => (
+      {['Home', 'Menu', 'Contact' , 'Cart'].map((name) => (
         <li key={name}>
           <Link
             to={`/${name}`}
