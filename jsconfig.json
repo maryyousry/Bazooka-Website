@@ -9,6 +9,7 @@
       "@forms/*": ["./src/forms/*"],
       "@hooks/*": ["./src/hooks/*"],
       "@pages/*": ["./src/pages/*"],
+<<<<<<< HEAD
       "@routes/*": ["./src/routes/*"],
       "@services/*": ["./src/services/*"],
       "@store/*": ["./src/store/*"],
@@ -19,3 +20,15 @@
   },
   "exclude": ["node_modules"]
 }
+=======
+      "@routes/*": ["./src/routers/*"],
+      "@services/*": ["./src/services/*"],
+      "@store/*": ["./src/store/*"],
+      "@schemas/*": ["./src/schemas/*"],
+      "@UI/*" : ["./src/UI/*"],
+      "@utils/*": ["./src/utils/*"],
+    }
+  },
+  "exclude": ["node_modules"]
+}
+>>>>>>> fb06b8fcbea303306f935ed731d9d08bfc0fb9af

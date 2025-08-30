@@ -12,7 +12,10 @@
   "dependencies": {
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
+<<<<<<< HEAD
     "@fortawesome/fontawesome-free": "^7.0.0",
+=======
+>>>>>>> fb06b8fcbea303306f935ed731d9d08bfc0fb9af
     "@mui/material": "^7.2.0",
     "@reduxjs/toolkit": "^2.8.2",
     "@tailwindcss/vite": "^4.1.11",
@@ -29,24 +32,38 @@
     "rollup": "^4.44.2",
     "slick-carousel": "^1.8.1",
     "swiper": "^11.2.9",
+<<<<<<< HEAD
+=======
+    "tailwindcss": "^4.1.11",
+>>>>>>> fb06b8fcbea303306f935ed731d9d08bfc0fb9af
     "use-debounce": "^10.0.5",
     "use-search-react": "^1.0.2",
     "yup": "^1.6.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.25.0",
+<<<<<<< HEAD
     "@tailwindcss/postcss": "^4.1.12",
     "@types/node": "^24.0.14",
     "@types/react": "^19.1.2",
     "@types/react-dom": "^19.1.2",
     "@vitejs/plugin-react": "^4.4.1",
     "autoprefixer": "^10.4.21",
+=======
+    "@types/node": "^24.1.0",
+    "@types/react": "^19.1.2",
+    "@types/react-dom": "^19.1.2",
+    "@vitejs/plugin-react": "^4.4.1",
+>>>>>>> fb06b8fcbea303306f935ed731d9d08bfc0fb9af
     "eslint": "^9.25.0",
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.19",
     "globals": "^16.0.0",
+<<<<<<< HEAD
     "postcss": "^8.5.6",
     "tailwindcss": "^4.1.12",
+=======
+>>>>>>> fb06b8fcbea303306f935ed731d9d08bfc0fb9af
     "vite": "^7.0.2",
     "vite-plugin-svgr": "^4.3.0"
   }
