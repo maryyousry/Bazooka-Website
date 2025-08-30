@@ -1,30 +1,33 @@
-// src/App.jsx
-import React from 'react';
-import { Routes, Route , Navigate  } from 'react-router-dom';
-import Layout from './components/Layout';
-import Home from './pages/Home'; // This includes Screen + BestSeller
-import ProductDetails from './components/ProductDetails';
-import Cart from "./pages/Cart";
-import Menu from './Pages/Menu';
+import { Routes, Route } from "react-router-dom";
+import Login from "./Components/Login";
+import Register from "./Components/Register";
+import Cart from "./Components/Cart";
+import Favorites from "./Components/Favorites";
+import Shop from "./Components/Shop";
+import Layout from "./Layout/Layout";
+import ProtectedRoute from "./Components/ProtectedRoute";
 
-
-
-function App() {
+const App = () => {
   return (
     <Routes>
-      <Route path="/" element={<Layout />}>
-      <Route path="/" element={<Navigate to="/home" replace />} />
+      {/* Root goes to Register */}
+      <Route path="/" element={<Register />} />
+      <Route path="/login" element={<Login />} />
 
-         <Route path="/home" element={<Home />} />
-          <Route path="/Menu" element={<Menu />} />
-
-        {/* Product details page */}
-          <Route path="product/:id" element={<ProductDetails />} />
-          <Route path="/cart" element={<Cart />} />
-
+      {/* Protected routes with Navbar/Layout */}
+      <Route
+        element={
+          <ProtectedRoute>
+            <Layout />
+          </ProtectedRoute>
+        }
+      >
+        <Route path="/shop" element={<Shop />} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/favorites" element={<Favorites />} />
       </Route>
     </Routes>
   );
-}
+};
 
 export default App;
